@@ -38,6 +38,13 @@ class AddToArrayTest extends TestCase{
         $this->assertEquals('Celana', $result->getArr()[6]);
     }
 
+    public function testEqualsResult()
+    {
+        $result = new AddToArray();
+        $result->addToArray();
+        $this->assertEquals(['Handuk', 'Meja', 'Buku', 'Topi', 'Baju', 'Kayu', 'Celana'], $result->getArr());
+    }
+
     public function testPropertyIsArray()
     {
         $result = new AddToArray();
