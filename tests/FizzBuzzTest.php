@@ -22,9 +22,22 @@ class FizzBuzzTest extends TestCase{
         $this->assertEquals(50, count($result->getFizzBuzz()));
     }
 
-    public function testCheckElementFizzBuzz()
+    public function testCheckElement3Fizz()
+    {
+        $result = new FizzBuzz();
+        $this->assertEquals('3 Fizz', $result->getFizzBuzz()[2]);
+    }
+
+    public function testCheckElement5Buzz()
+    {
+        $result = new FizzBuzz();
+        $this->assertEquals('5 Buzz', $result->getFizzBuzz()[4]);
+    }
+
+    public function testCheckElement15FizzBuzz()
     {
         $result = new FizzBuzz();
         $this->assertEquals('15 FizzBuzz', $result->getFizzBuzz()[14]);
     }
+
 }
