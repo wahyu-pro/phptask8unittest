@@ -17,15 +17,25 @@ class AddToArrayTest extends TestCase{
         $this->assertClassHasAttribute($attr, AddToArray::class);
     }
 
+    public function testInputIsArray()
+    {
+        $result = new AddToArray();
+        $result->addToArray();
+        $this->assertIsArray($result->getArr());
+    }
+
     public function testEqualResult()
     {
         $result = new AddToArray();
+        $result->addToArray();
         $this->assertEquals('Handuk', $result->getArr()[0]);
+        $this->assertEquals('Celana', $result->getArr()[6]);
     }
 
     public function testPropertyIsArray()
     {
         $result = new AddToArray();
+        $result->addToArray();
         $this->assertIsArray($result->getArr());
     }
 
