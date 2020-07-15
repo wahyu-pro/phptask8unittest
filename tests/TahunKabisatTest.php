@@ -28,10 +28,17 @@ class TahunKabisatTest extends TestCase{
         $this->assertIsInt($result->getTahun());
     }
 
-    public function testMatchingResult()
+    public function testResultIsKabisat()
     {
         $result = new TahunKabisat();
         $result->setTahun(2000);
         $this->assertEquals("Tahun ".$result->getTahun()." adalah tahun kabisat", $result->getTahunKabisat());
+    }
+
+    public function testResultIsNotKabisat()
+    {
+        $result = new TahunKabisat();
+        $result->setTahun(1700);
+        $this->assertEquals("Tahun ".$result->getTahun()." bukan tahun kabisat", $result->getTahunKabisat());
     }
 }

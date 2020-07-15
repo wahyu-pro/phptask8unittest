@@ -24,7 +24,7 @@ class JumlahKarakterTest extends TestCase{
         $this->assertIsString($result->getKarakter());
     }
 
-    public function testCountCharacter()
+    public function testResultCountCharacterIsInt()
     {
         $result = new JumlahKarakter();
         $sum = $result->getJumlahChar();
