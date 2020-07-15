@@ -16,9 +16,15 @@ class FizzBuzzTest extends TestCase{
         $this->assertIsArray($result->getFizzBuzz());
     }
 
-    public function testJumlahAttribute()
+    public function testSumElementAttribute()
     {
         $result = new FizzBuzz();
         $this->assertEquals(50, count($result->getFizzBuzz()));
+    }
+
+    public function testCheckElementFizzBuzz()
+    {
+        $result = new FizzBuzz();
+        $this->assertEquals('15 FizzBuzz', $result->getFizzBuzz()[14]);
     }
 }

@@ -24,7 +24,7 @@ class AddToArrayTest extends TestCase{
         $this->assertIsArray($result->getArr());
     }
 
-    public function testEqualResult()
+    public function testCheckElementHandukAndCelana()
     {
         $result = new AddToArray();
         $result->addToArray();
