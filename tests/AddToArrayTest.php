@@ -24,11 +24,17 @@ class AddToArrayTest extends TestCase{
         $this->assertIsArray($result->getArr());
     }
 
-    public function testCheckElementHandukAndCelana()
+    public function testCheckElementHanduk()
     {
         $result = new AddToArray();
         $result->addToArray();
         $this->assertEquals('Handuk', $result->getArr()[0]);
+    }
+
+    public function testCheckElementCelana()
+    {
+        $result = new AddToArray();
+        $result->addToArray();
         $this->assertEquals('Celana', $result->getArr()[6]);
     }
 

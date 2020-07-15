@@ -3,11 +3,6 @@
 class AddToArray{
     protected $arr;
 
-    // public function __construct()
-    // {
-    //     $this->addToArray();
-    // }
-
     public function getArr()
     {
         return $this->arr;
